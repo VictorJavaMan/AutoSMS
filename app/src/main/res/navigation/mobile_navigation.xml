@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_listphones" >
+
+    <fragment
+        android:id="@+id/navigation_listphones"
+        android:name="com.black.autosmska.ListPhonesFragment"
+        android:label="@string/list_phone_title"
+        tools:layout="@layout/fragment_listphones" >
+        <action
+            android:id="@+id/action_List_to_Option"
+            app:destination="@id/navigation_options"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_List_to_Add"
+            app:destination="@id/navigation_addphone"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_story"
+        android:name="com.black.autosmska.StoryFragment"
+        android:label="@string/story_phone_title"
+        tools:layout="@layout/fragment_story" >
+        <action
+            android:id="@+id/action_Story_to_Add"
+            app:destination="@id/navigation_addphone"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_Story_to_Option"
+            app:destination="@id/navigation_options"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_addphone"
+        android:name="com.black.autosmska.AddPhoneFragment"
+        android:label="@string/add_phone_title"
+        tools:layout="@layout/fragment_addphone" >
+        <action
+            android:id="@+id/action_Add_to_List"
+            app:destination="@id/navigation_listphones"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_Add_to_Story"
+            app:destination="@id/navigation_story"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="sms"
+            app:argType="string" />
+        <argument
+            android:name="check"
+            app:argType="string" />
+        <argument
+            android:name="button"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_options"
+        android:name="com.black.autosmska.OptionsFragment"
+        android:label="@string/options_title"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_Option_to_Story"
+            app:destination="@id/navigation_story"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_Option_to_List"
+            app:destination="@id/navigation_listphones"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.black.autosmska.OptionsFragment"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="#333333" >
+
+    <Button
+        android:id="@+id/button_phone_time"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time_block_phone_text"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_sms_time"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time_block_sms_text"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_on_off"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_manual"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/users_manual"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_info"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_text"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+</LinearLayout>
